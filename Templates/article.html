@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Jobbers by~ Sim</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+      <!-- fevicon -->
+      <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+      <link rel="stylesoeet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container-fluid header_main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="logo" href="index.html"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/explore/all">Explore</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="/employer">Post a job</a>
+                     </li>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+
+
+{% block body %}
+
+  <h2 class="most_text"> {{job_info[id]["Title"]}} </h2>
+
+  <p class="about_text">Job category : {{job_info[id]["label"]}}</p>
+  <p class="about_text">Posted By : {{job_info[id]["Company"]}}</p>
+  <br> <p>-------- </p>
+  <h2 class="lorem_text"> Job description: {{job_info[id]["Description"]}} </h2>
+
+{% endblock %}
+
+
+
+<!-- footer section start -->
+<div class="footer_section layout_padding">
+   <div class="container">
+      <div class="footer_logo"><a href="/"><img src="{{ url_for('static', filename='images/footer-logo.png') }}"></a></div>
+      <div class="footer_menu">
+
+      </div>
+      <div class="contact_menu">
+         <ul>
+            <li><a href="#"><img src="{{ url_for('static', filename='images/call-icon.png') }}"></a></li>
+            <li><a href="#"><img src="{{ url_for('static', filename='images/mail-icon.png') }}"></a></li>
+         </ul>
+      </div>
+   </div>
+</div>
+<!-- footer section end -->

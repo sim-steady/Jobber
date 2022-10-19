@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+<h2 class="newsletter_main"> Welcome to our job posting portal</h2>
+<p>Please enter the job title and description</p>
+
+<form action = "/employer" method = "POST">
+  <div class="col-lg-4 col-sm-12">
+     <div class="newsletter_main">
+        <h1 class="newsletter_taital">Post a job</h1>
+        <div class="input_box">
+          <h1>Title:</h1>
+           <P> <input type="text" style="height:50px ;width:100%" placeholder="Title" name="title"/> </p>
+           <h2>Description:</h2>
+           <textarea type="text" class="input_text" placeholder="Description" style="height:200px; width:100%" name="description"> </textarea>
+           <p> <input class="send_text" type="submit"></p>
+
+        </div>
+     </div>
+  </div>
+</form>
+<p> {{ predicted_message }} </p>
+
+{% endblock %}

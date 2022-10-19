@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<!-- tag section start -->
+<div class="tag_section layout_padding">
+   <div class="container">
+      <h1 class="tag_taital">Explore jobs by categories</h1>
+      <div class="tag_bt">
+         <ul>
+            <li><a href="/explore/Accounting-Finance">Accounting-Finance</a></li>
+            <li><a href="/explore/Engineering">Engineering</a></li>
+            <li><a href="/explore/Healthcare-Nursing">Healthcare-Nursing</a></li>
+            <li><a href="/explore/Sales">Sales</a></li>
+         </ul>
+      </div>
+      <div class="tag_bt_2">
+
+      </div>
+   </div>
+</div>
+<!-- tag section end -->
+
+<!-- about section start -->
+<div class="about_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 col-sm-12">
+            <div class="about_img"><img src="{{ url_for('static', filename='images/about-img.png') }}"></div>
+            <div class="like_icon"><img src="{{ url_for('static', filename='images/like-icon.png') }}"></div>
+            <p class="post_text">Job category : {{all_articles[category][0]["category"]}}</p>
+            <h2 class="most_text"> {{all_articles[category][0]["Title"]}} </h2>
+            <p class="lorem_text"> {{all_articles[category][0]["preview"]}} </p>
+            <div class="social_icon_main">
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/fb-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/instagram-icon.png') }}"></a></li>
+                  </ul>
+               </div>
+               <div class="read_bt"><a href="article/{{all_articles[category][0]['id']}}">Read More</a></div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+<!-- about section end -->
+<!-- blog section start -->
+<div class="about_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 col-sm-12">
+            <div class="about_img"><img src="{{ url_for('static', filename='images/img-8.png') }}"></div>
+            <div class="like_icon"><img src="{{ url_for('static', filename='images/like-icon.png') }}"></div>
+            <p class="post_text">Job category : {{all_articles[category][1]["category"]}}</p>
+            <h2 class="most_text"> {{all_articles[category][1]["Title"]}} </h2>
+            <p class="lorem_text"> {{all_articles[category][1]["preview"]}} </p>
+            <div class="social_icon_main">
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/fb-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/instagram-icon.png') }}"></a></li>
+                  </ul>
+               </div>
+               <div class="read_bt"><a href="article/{{all_articles[category][1]['id']}}">Read More</a></div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+<!-- blog section end -->
+<!-- newsletter section start -->
+<div class="about_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 col-sm-12">
+            <div class="about_img"><img src="{{ url_for('static', filename='images/img-9.png') }}"></div>
+            <div class="like_icon"><img src="{{ url_for('static', filename='images/like-icon.png') }}"></div>
+            <p class="post_text">Job category : {{all_articles[category][2]["category"]}}</p>
+            <h2 class="most_text"> {{all_articles[category][2]["Title"]}} </h2>
+            <p class="lorem_text"> {{all_articles[category][2]["preview"]}} </p>
+            <div class="social_icon_main">
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/fb-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/instagram-icon.png') }}"></a></li>
+                  </ul>
+               </div>
+               <div class="read_bt"><a href="article/{{all_articles[category][2]['id']}}">Read More</a></div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-sm-12">
+            <div class="newsletter_main">
+               <h1 class="newsletter_taital">NEWSLETTER</h1>
+               <div class="input_box">
+                  <input type="text" class="input_text" placeholder="Enter Your email" name="Enter Your email">
+                  <input type="text" class="input_text" placeholder="Your name" name="Your name">
+                  <div class="send_text"><a href="#">Subscribe</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- newsletter section end -->
+<!-- recent section start -->
+<div class="about_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 col-sm-12">
+            <div class="about_img"><img src="{{ url_for('static', filename='images/img-10.png') }}"></div>
+            <div class="like_icon"><img src="{{ url_for('static', filename='images/like-icon.png') }}"></div>
+            <p class="post_text">Job category : {{all_articles[category][3]["category"]}}</p>
+            <h2 class="most_text"> {{all_articles[category][3]["Title"]}} </h2>
+            <p class="lorem_text"> {{all_articles[category][3]["preview"]}} </p>
+            <div class="social_icon_main">
+               <div class="social_icon">
+                  <ul>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/fb-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/twitter-icon.png') }}"></a></li>
+                     <li><a href="#"><img src="{{ url_for('static', filename='images/instagram-icon.png') }}"></a></li>
+                  </ul>
+               </div>
+               <div class="read_bt"><a href="article/{{all_articles[category][3]['id']}}">Read More</a></div>
+            </div>
+         </div>
+         <div class="col-lg-4 col-sm-12">
+            <div class="newsletter_main">
+               <h1 class="recent_taital">Recent post</h1>
+               <div class="recent_box">
+                  <div class="recent_left">
+                     <div class="image_6"><img src="{{ url_for('static', filename='images/img-6.png') }}"></div>
+                  </div>
+                  <div class="recent_right">
+                     <h3 class="consectetur_text"><a href="article/{{recent_ids[0]}}">{{job_info[recent_ids[0]]["Title"]}}</a></h3>
+                     <p class="dolor_text"> {{job_info[recent_ids[0]]["preview"]}} </p>
+                  </div>
+               </div>
+               <div class="recent_box">
+                  <div class="recent_left">
+                     <div class="image_6"><img src="{{ url_for('static', filename='images/img-7.png') }}"></div>
+                  </div>
+                  <div class="recent_right">
+                     <h3 class="consectetur_text"><a href="article/{{recent_ids[1]}}">{{job_info[recent_ids[1]]["Title"]}}</a></h3>
+                     <p class="dolor_text"> {{job_info[recent_ids[1]]["preview"]}} </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<!-- tag section start -->
+<div class="tag_section layout_padding">
+   <div class="container">
+      <h4></h4>
+      <div class="tag_bt">
+
+      </div>
+      <div class="tag_bt_2">
+
+      </div>
+   </div>
+</div>
+<!-- tag section end -->
+
+
+{% endblock %}
